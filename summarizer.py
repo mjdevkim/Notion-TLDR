@@ -162,18 +162,18 @@ def generate_summary(content, media_info):
         system_prompt = """간결한 요약 전문가입니다.
 
 규칙:
-- 글머리 기호(•) 3-5개 핵심 포인트
+- 한문장
 - 짧고 구체적으로
-- 200자 이내"""
-        user_prompt = f"글머리 기호로 요약:\n\n{content[:6000]}"
+- 100자 이내"""
+        user_prompt = f"요약:\n\n{content[:6000]}"
     else:
         system_prompt = """Expert at concise summaries.
 
 Rules:
-- 3-5 bullet points (•)
+- single sentence
 - Short and specific
 - Under 200 chars"""
-        user_prompt = f"Summarize with bullets:\n\n{content[:6000]}"
+        user_prompt = f"Summarize:\n\n{content[:6000]}"
     
     # Media prefix
     media_prefix = ""
