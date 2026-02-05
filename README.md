@@ -1,6 +1,6 @@
-# Notion TLDR Auto-Summarizer
-
-AI-generate one-liner summaries for Notion web clippings.
+# Notion Webclippings AI Summarizer
+![Notion Database Image](notion-db.png)
+**AI-generate one-liner summaries for Notion web clippings.**
 
 ## Setup
 
