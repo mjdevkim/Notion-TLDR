@@ -1,0 +1,30 @@
+name: Auto Summarize Notion Pages
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Runs once daily
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install requests openai
+    
+    - name: Run summarizer
+      env:
+        NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        NOTION_DB_ID: ${{ secrets.NOTION_DB_ID }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: python summarizer.py
