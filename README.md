@@ -1,6 +1,7 @@
 # Notion Web clippings AI Summarizer
 ![Notion Database Image](notion-db.png)
 **One-liner summary generator for Notion web clippings**
+
 There is no point in saving posts, links, resources if you don't look back into it. Instead, export the link to it into your Notion database, then let this AI Summarizer summarize the content for you to read later.
 
 ## Setup
